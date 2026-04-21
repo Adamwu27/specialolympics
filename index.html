@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特殊奥林匹克 - 融合新时代</title>
+    <style>
+        :root {
+            --primary-red: #E60012;
+            --dark-gray: #4A4A4A;
+            --light-gray: #6B6B6B;
+            --bg-light: #F8F8F8;
+            --white: #FFFFFF;
+            --accent-blue: #2E5C8A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.8;
+            background-color: var(--white);
+        }
+
+        /* Header */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #8B0000 100%);
+            color: var(--white);
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.3; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero-tagline {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 30px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 15px 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .nav-list li {
+            margin: 5px 15px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-list a:hover {
+            background: var(--primary-red);
+            color: var(--white);
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-red);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--light-gray);
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        /* What is SO */
+        .what-is-so {
+            background: var(--bg-light);
+        }
+
+        .intro-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .intro-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .intro-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(230,0,18,0.12);
+        }
+
+        .intro-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .intro-card h3 {
+            color: var(--primary-red);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .intro-card p {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Origin Story */
+        .origin {
+            background: var(--white);
+        }
+
+        .origin-section {
+            margin-bottom: 30px;
+        }
+
+        .origin-section h3 {
+            font-size: 1.4rem;
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+        }
+
+        .origin-section h3 span {
+            color: var(--primary-red);
+        }
+
+        .origin-section p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: var(--dark-gray);
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #C4000F 100%);
+            color: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            font-size: 3rem;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .quote-box p {
+            font-style: italic;
+            font-size: 1.1rem;
+            padding-left: 25px;
+            margin-bottom: 0 !important;
+            color: var(--white) !important;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-red), #FF6B6B);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding-left: 25px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            box-shadow: 0 2px 8px rgba(230,0,18,0.3);
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--primary-red);
+            font-size: 1.1rem;
+        }
+
+        .timeline-text {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Timeline Gallery Layout */
+        .timeline-gallery {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .timeline-left {
+            flex: 1;
+        }
+
+        .timeline-right {
+            flex: 0 0 280px;
+        }
+
+        .timeline-images {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .timeline-img-item {
+            text-align: center;
+        }
+
+        .timeline-img-item img {
+            width: 100%;
+            max-height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .timeline-img-item img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .timeline-img-item .img-caption {
+            font-size: 0.75rem;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-gallery {
+                flex-direction: column;
+            }
+
+            .timeline-right {
+                flex: none;
+                width: 100%;
+            }
+
+            .timeline-images {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .timeline-img-item {
+                flex: 0 0 calc(33.33% - 10px);
+            }
+
+            .timeline-img-item img {
+                max-height: 80px;
+            }
+        }
+
+        /* Clickable Image */
+        .clickable-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .clickable-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .img-caption {
+            font-size: 0.85rem;
+            color: var(--light-gray);
+            text-align: center;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .img-with-caption {
+            text-align: center;
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.92);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-caption {
+            color: white;
+            margin-top: 15px;
+            font-size: 1rem;
+            text-align: center;
+            max-width: 80%;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            transform: scale(1.1);
+        }
+
+        /* Comparison */
+        .comparison {
+            background: var(--bg-light);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+        }
+
+        .comparison-table th {
+            background: var(--primary-red);
+            color: var(--white);
+            padding: 18px 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .comparison-table th:first-child {
+            text-align: left;
+        }
+
+        .comparison-table th:not(:first-child) {
+            text-align: center;
+        }
+
+        .comparison-table td {
+            padding: 15px 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+            vertical-align: top;
+        }
+
+        .comparison-table td:first-child {
+            font-weight: 600;
+            color: var(--dark-gray);
+            background: #FAFAFA;
+        }
+
+        .comparison-table td:not(:first-child) {
+            text-align: center;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover td {
+            background: #FFF5F5;
+        }
+
+        /* Unified Sports */
+        .unified {
+            background: var(--white);
+        }
+
+        .unified-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .unified-type {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-red);
+            transition: transform 0.3s ease;
+        }
+
+        .unified-type:hover {
+            transform: translateX(5px);
+        }
+
+        .unified-type h4 {
+            color: var(--primary-red);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .unified-type p {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Athlete Stories */
+        .athletes {
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--white) 100%);
+        }
+
+        .athlete-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+        }
+
+        .athlete-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .athlete-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .athlete-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .athlete-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .athlete-image img:hover {
+            transform: scale(1.03);
+        }
+
+        .athlete-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--primary-red);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .athlete-content {
+            padding: 20px;
+        }
+
+        .athlete-content h3 {
+            color: var(--dark-gray);
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+
+        .athlete-country {
+            color: var(--primary-red);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .athlete-content p {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .athlete-achievements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .achievement-tag {
+            background: #FFF0F0;
+            color: var(--primary-red);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        /* East Asia */
+        .east-asia {
+            background: var(--bg-light);
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px 15px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+
+        .stat-label {
+            color: var(--light-gray);
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        .east-asia-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .ambassador-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .ambassador-tag {
+            background: var(--primary-red);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .service-area {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .service-area h4 {
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .area-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        /* Ambassador Grid */
+        .ambassador-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .ambassador-item {
+            text-align: center;
+            padding: 12px 8px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .ambassador-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(230,0,18,0.15);
+        }
+
+        .ambassador-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            margin: 0 auto 8px;
+            overflow: hidden;
+            border: 3px solid var(--primary-red);
+        }
+
+        .ambassador-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ambassador-name {
+            font-weight: 600;
+            color: var(--dark-gray);
+            font-size: 0.85rem;
+        }
+
+        .ambassador-title {
+            font-size: 0.7rem;
+            color: var(--light-gray);
+            margin-top: 2px;
+        }
+
+        /* World Games History */
+        .games-history {
+            background: linear-gradient(135deg, #FFF5F5 0%, #FFF 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #FFE5E5;
+        }
+
+        .games-history h4 {
+            color: var(--primary-red);
+            font-size: 1rem;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .games-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .games-col h5 {
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .games-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            justify-content: center;
+        }
+
+        .games-item {
+            background: var(--white);
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            color: var(--dark-gray);
+            border: 1px solid #eee;
+            white-space: nowrap;
+        }
+
+        .games-item span {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        .games-image {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .games-image img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .ambassador-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 8px;
+            }
+
+            .ambassador-avatar {
+                width: 45px;
+                height: 45px;
+            }
+
+            .ambassador-name {
+                font-size: 0.75rem;
+            }
+
+            .ambassador-title {
+                font-size: 0.6rem;
+            }
+
+            .games-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .games-item {
+                font-size: 0.65rem;
+                padding: 2px 6px;
+            }
+        }
+
+        .region-map {
+            display: none;
+        }
+
+        .members-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .member-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .member-item:hover {
+            transform: translateX(5px);
+        }
+
+        .member-flag {
+            font-size: 1.2rem;
+        }
+
+        .member-name {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+
+        @media (max-width: 480px) {
+            .ambassador-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .area-tag {
+            background: #F0F0F0;
+            color: var(--dark-gray);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        /* China Section */
+        .china-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .china-section h3 {
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .china-section p {
+            color: var(--light-gray);
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        /* Get Involved */
+        .get-involved {
+            background: var(--primary-red);
+            color: var(--white);
+        }
+
+        .get-involved .section-title h2,
+        .get-involved .section-title p {
+            color: var(--white);
+        }
+
+        .get-involved .section-title h2::after {
+            background: var(--white);
+        }
+
+        .action-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .action-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px 25px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .action-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.25);
+        }
+
+        .action-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .action-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .action-card p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .footer-divider {
+            width: 50px;
+            height: 2px;
+            background: var(--primary-red);
+            margin: 20px auto;
+        }
+
+        .slogan {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--primary-red);
+            margin-top: 15px;
+        }
+
+        .oath-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .oath-subtitle {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .slogan-en {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.8);
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .intro-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .intro-cards {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 35px 20px 45px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 40px 15px;
+            }
+
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .athlete-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .east-asia-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.75rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px 6px;
+            }
+
+            .nav-list {
+                padding: 10px;
+            }
+
+            .nav-list li {
+                margin: 3px 6px;
+            }
+
+            .nav-list a {
+                font-size: 0.85rem;
+                padding: 6px 10px;
+            }
+
+            .lightbox-close {
+                top: 15px;
+                right: 15px;
+                font-size: 30px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img src="" alt="" id="lightbox-img">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>特殊奥林匹克</h1>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="#what-is-so">特奥是什么</a></li>
+            <li><a href="#origin">起源故事</a></li>
+            <li><a href="#comparison">三大赛事区别</a></li>
+            <li><a href="#unified">融合运动</a></li>
+            <li><a href="#athletes">明星运动员</a></li>
+            <li><a href="#east-asia">东亚区</a></li>
+            <li><a href="#get-involved">参与支持</a></li>
+        </ul>
+    </nav>
+
+    <!-- What is Special Olympics -->
+    <section class="what-is-so" id="what-is-so">
+        <div class="section-title">
+            <h2>特奥是什么？</h2>
+            <p>特殊奥林匹克（Special Olympics）是一个为智障人士提供常年体育训练和竞赛的非营利组织</p>
+        </div>
+
+        <div class="intro-cards">
+            <div class="intro-card fade-in">
+                <div class="icon">🏆</div>
+                <h3>全球运动</h3>
+                <p>特奥会在全球拥有200多个成员组织，每年举办夏季和冬季世界运动会，每两年就有一次世界级大赛。</p>
+            </div>
+            <div class="intro-card fade-in">
+                <div class="icon">❤️</div>
+                <h3>超越体育</h3>
+                <p>特奥不仅关注运动成绩，更关注运动员的身心健康。健康计划涵盖视力、听力、口腔等多个领域。</p>
+            </div>
+            <div class="intro-card fade-in">
+                <div class="icon">🤝</div>
+                <h3>融合理念</h3>
+                <p>通过体育活动，让智障人士与非智障人士共同参与，学习包容与尊重，共建无障碍社区。</p>
+            </div>
+            <div class="intro-card fade-in">
+                <div class="icon">🌟</div>
+                <h3>发掘潜能</h3>
+                <p>让智障人士在运动中发挥潜能、勇敢表现，与家人、朋友分享快乐，活出精彩人生。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Origin Story -->
+    <section class="origin" id="origin">
+        <div class="section-title">
+            <h2>起源故事</h2>
+            <p>一场始于后院的夏令营，如何改变世界</p>
+        </div>
+
+        <div class="origin-section">
+            <h3>创始人：<span>尤妮丝·肯尼迪·施莱佛</span></h3>
+            <p>尤妮丝·肯尼迪·施莱佛是美国肯尼迪家族的一员，约翰·肯尼迪的妹妹。在长达50多年的时间里，她致力于改善智障人士的生活质量，用行动改变了世界对智障人群的看法。</p>
+            <p>她的动力来自于姐姐罗斯玛丽——尤妮丝亲眼目睹了姐姐因智力障碍所遭受的不公正对待，这激励她毕生投身于为智障人群争取权利的事业。</p>
+            
+            <div class="img-with-caption">
+                <img src="https://dotorg.brightspotcdn.com/dims4/default/f4d71d6/2147483647/strip/true/crop/800x708+0+46/resize/540x478!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F29%2Fe6%2F6368b2254496bd62ba8013e97db5%2Feks-and-rosemary-young.jpg" 
+                     alt="尤妮丝·肯尼迪·施莱佛" 
+                     class="clickable-img" 
+                     onclick="openLightbox(this.src, '尤妮丝·肯尼迪·施莱佛')">
+                <p class="img-caption">尤妮丝·肯尼迪·施莱佛 (Eunice Kennedy Shriver)</p>
+            </div>
+        </div>
+
+        <div class="origin-section" style="margin-top: 30px;">
+            <h3>后院的夏令营</h3>
+            <p>特奥运动会始于尤妮丝在自家后院为智力障碍人士组织的夏令营活动。当时她邀请周边社区所有的智力障碍人士和家人来自家后院参加夏令营。简单的体育活动让大家第一次感受到被接纳包容的温暖。</p>
+            
+            <div class="img-with-caption">
+                <img src="https://dotorg.brightspotcdn.com/dims4/default/d6a41c3/2147483647/strip/true/crop/600x400+0+0/resize/1280x853!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F29%2Fe6%2F9771bf244c7683187bb712b13565%2Fth-4-eks.jpg" 
+                     alt="后院的施莱佛夏令营" 
+                     class="clickable-img" 
+                     onclick="openLightbox(this.src, '后院的施莱佛夏令营')">
+                <p class="img-caption">施莱佛夏令营活动</p>
+            </div>
+        </div>
+
+        <div class="origin-section" style="margin-top: 30px;">
+            <h3>特奥世界运动会</h3>
+            <p>1968年7月20日，第一届特殊奥林匹克世界夏季运动会在美国芝加哥军人球场举行。来自美国的数百名智障运动员首次站上了体育赛场。从此，特奥运动迅速传遍全球，成为一场为智障人士争取平等机会的社会变革。</p>
+            
+            <div class="img-with-caption">
+                <img src="https://dotorg.brightspotcdn.com/dims4/default/7fe06a8/2147483647/strip/true/crop/600x400+0+0/resize/1280x853!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F61%2F58%2F197aa11f490d8cc6f0a750441799%2Fth-5-eks.jpg" 
+                     alt="第一届特奥世界夏季运动会" 
+                     class="clickable-img" 
+                     onclick="openLightbox(this.src, '第一届特奥世界夏季运动会 1968')">
+                <p class="img-caption">第一届特奥世界夏季运动会 1968</p>
+            </div>
+        </div>
+
+        <h4 style="color: var(--dark-gray); margin: 30px 0 20px; text-align: center;">1968-2025 特奥发展历程大事记</h4>
+
+        <div class="timeline-gallery">
+            <div class="timeline-left">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1968.7.20</div>
+                        <div class="timeline-text">第一届特奥世界夏季运动会在美国芝加哥举行，星星之火开始燎原</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2002</div>
+                        <div class="timeline-text">特奥东亚区正式成立</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2007</div>
+                        <div class="timeline-text">第十二届特奥世界夏季运动会在上海举办</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-text">特奥迎来50岁生日，杨澜女士与运动员徐闯代表东亚区传递火炬</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-text">第十二届特奥世界冬季运动会在意大利都灵举行</div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-right">
+                <div class="timeline-images">
+                    <div class="timeline-img-item">
+                        <img src="https://dotorg.brightspotcdn.com/dims4/default/7fe06a8/2147483647/strip/true/crop/600x400+0+0/resize/1280x853!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F61%2F58%2F197aa11f490d8cc6f0a750441799%2Fth-5-eks.jpg" 
+                             alt="第一届特奥世界夏季运动会" 
+                             class="clickable-img"
+                             onclick="openLightbox(this.src, '第一届特奥世界夏季运动会 1968')">
+                        <p class="img-caption">1968年 芝加哥</p>
+                    </div>
+                    <div class="timeline-img-item">
+                        <img src="https://ts1.tc.mm.bing.net/th/id/OIP-C.sIP3fPWkQPVcLUHXfCPLVAHaHw?rs=1&pid=ImgDetMain&o=7&rm=3" 
+                             alt="特奥50周年" 
+                             class="clickable-img"
+                             style="object-position: center 35%;"
+                             onclick="openLightbox(this.src, '特奥迎来50岁生日 2018')">
+                        <p class="img-caption">2018年 50周年</p>
+                    </div>
+                    <div class="timeline-img-item">
+                        <img src="https://edu.eastday.com/images/thumbnailimg/month_2503/202503190347384056.jpg" 
+                             alt="都灵冬季运动会" 
+                             class="clickable-img"
+                             onclick="openLightbox(this.src, '第十二届特奥世界冬季运动会 意大利都灵 2025')">
+                        <p class="img-caption">2025年 都灵</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="comparison" id="comparison">
+        <div class="section-title">
+            <h2>特奥 vs 残奥 vs 奥运</h2>
+            <p>三大奥运级赛事有何不同？</p>
+        </div>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>区别</th>
+                    <th>特殊奥林匹克</th>
+                    <th>残奥会</th>
+                    <th>奥运会</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>运动员群体</td>
+                    <td>智力障碍人士为主</td>
+                    <td>肢体、视力等障碍人士</td>
+                    <td>非残障运动员</td>
+                </tr>
+                <tr>
+                    <td>核心理念</td>
+                    <td>勇敢尝试，争取胜利<br>重在参与和自我超越</td>
+                    <td>追求精英竞技成绩<br>展现残障运动员实力</td>
+                    <td>更高、更快、更强<br>世界顶级竞技</td>
+                </tr>
+                <tr>
+                    <td>组织架构</td>
+                    <td>国际特奥会董事会领导<br>全球200+成员组织</td>
+                    <td>国际残奥委会<br>各国代表团委员会</td>
+                    <td>国际奥委会<br>各国奥委会</td>
+                </tr>
+                <tr>
+                    <td>赛事周期</td>
+                    <td>夏冬两季交替<br>每两年一届</td>
+                    <td>紧随奥运会后举办</td>
+                    <td>每四年一届</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Unified Sports -->
+    <section class="unified" id="unified">
+        <div class="section-title">
+            <h2>融合运动</h2>
+            <p>让智障与非智障人士共同组队训练和比赛，通过体育打破界限，让每个人都能在运动中找到归属感</p>
+        </div>
+
+        <div class="unified-types">
+            <div class="unified-type fade-in">
+                <h4>🏅 竞技型</h4>
+                <p>双方人数和技能水平相近，智障与非智障运动员同场竞技，展现真正的体育精神。</p>
+            </div>
+            <div class="unified-type fade-in">
+                <h4>📈 发展型</h4>
+                <p>技能较高的队员帮助较低者学习，通过传帮带实现共同成长，培养团队协作精神。</p>
+            </div>
+            <div class="unified-type fade-in">
+                <h4>🎉 体验型</h4>
+                <p>重在参与和感受融合的魅力，让更多人体验体育带来的快乐与连接。</p>
+            </div>
+        </div>
+
+        <div class="section-title" style="margin-top: 50px;">
+            <h2>融合学校</h2>
+            <p>特奥融合学校计划已覆盖全球<span style="color: var(--primary-red); font-weight: bold;">151</span>个国家的<span style="color: var(--primary-red); font-weight: bold;">28,000+</span>所学校，超过100万青少年参与。<br><br>
+            在中国，截止2026年，东亚区共有超过<span style="color: var(--primary-red); font-weight: bold;">1,500</span>所学校加入，其中中国大陆超过<span style="color: var(--primary-red); font-weight: bold;">500</span>所融合学校。</p>
+        </div>
+    </section>
+
+    <!-- Athlete Stories -->
+    <section class="athletes" id="athletes">
+        <div class="section-title">
+            <h2>明星运动员故事</h2>
+            <p>每一位特奥运动员，都是自己生活的英雄</p>
+        </div>
+
+        <div class="athlete-cards">
+            <div class="athlete-card fade-in">
+                <div class="athlete-image">
+                    <img src="https://ts3.tc.mm.bing.net/th/id/OIP-C.hckjL-d6SN_8spLTgFmMuQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" 
+                         alt="洛丽塔·克莱伯恩"
+                         onclick="openLightbox(this.src, '洛丽塔·克莱伯恩')">
+                    <span class="athlete-badge">⭐ 美国</span>
+                </div>
+                <div class="athlete-content">
+                    <h3>洛丽塔·克莱伯恩</h3>
+                    <p>来自美国的传奇特奥运动员，虽然生来伴有部分失明和智力障碍，但她从未向命运低头，用自己的脚步跑出了生命的宽度。</p>
+                    <div class="athlete-achievements">
+                        <span class="achievement-tag">🏃 完成26次全程马拉松</span>
+                        <span class="achievement-tag">🥋 空手道黑带四段</span>
+                        <span class="achievement-tag">🏆 USA Today年度女性</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="athlete-card fade-in">
+                <div class="athlete-image">
+                    <img src="https://pics1.baidu.com/feed/7c1ed21b0ef41bd5ea0835ad6680eec738db3df2.jpeg@f_auto?token=d5768bbb6e944a3adacafbef2774f7fc" 
+                         alt="徐闯"
+                         onclick="openLightbox(this.src, '徐闯')">
+                    <span class="athlete-badge">🇨🇳 中国</span>
+                </div>
+                <div class="athlete-content">
+                    <h3>徐闯</h3>
+                    <p>来自中国的特奥运动员——徐闯，中国阿甘，他的乐观和坚持让他成为无数人心中的榜样。他用行动证明了特奥运动如何改变人生。</p>
+                    <div class="athlete-achievements">
+                        <span class="achievement-tag">🔥 两次担任特奥火炬手</span>
+                        <span class="achievement-tag">🏠 受邀前往白宫</span>
+                        <span class="achievement-tag">💼 现任职于安利公司</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- East Asia -->
+    <section class="east-asia" id="east-asia">
+        <div class="section-title">
+            <h2>特奥东亚区</h2>
+            <p>自2002年起，服务于东亚地区的智障人士</p>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-item fade-in">
+                <div class="stat-number">2002</div>
+                <div class="stat-label">东亚区成立</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">1500+</div>
+                <div class="stat-label">融合学校数量</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">5000万+</div>
+                <div class="stat-label">累计筹款(元)</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">11届</div>
+                <div class="stat-label">慈善晚宴举办</div>
+            </div>
+        </div>
+
+        <div class="east-asia-grid">
+            <div class="service-area">
+                <h4>📍 东亚区成员组织</h4>
+                <div class="members-list">
+                    <div class="member-item">
+                        <span class="member-name">中国特奥委员会 (SOC)</span>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-name">香港特殊奥运会 (SOHK)</span>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-name">澳门特殊奥运会 (SOM)</span>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-name">中华台北特奥会 (SOCT)</span>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-name">韩国特殊奥运会 (SOK)</span>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-name">蒙古特殊奥运会 (SOMGL)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-area">
+                <h4>⭐ 形象大使</h4>
+                <div class="ambassador-grid">
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, '姚明 - 特奥东亚区形象大使')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:var(--primary-red);color:white;font-size:1.5rem;font-weight:bold;">姚</div>
+                        <div class="ambassador-name">姚明</div>
+                        <div class="ambassador-title">篮球传奇</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, '李娜 - 特奥东亚区形象大使')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#E91E63;color:white;font-size:1.5rem;font-weight:bold;">李</div>
+                        <div class="ambassador-name">李娜</div>
+                        <div class="ambassador-title">网球冠军</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, '杨澜 - 特奥东亚区形象大使')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#9C27B0;color:white;font-size:1.5rem;font-weight:bold;">杨</div>
+                        <div class="ambassador-name">杨澜</div>
+                        <div class="ambassador-title">知名主持人</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, '邹市明 - 特奥东亚区形象大使')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#FF9800;color:white;font-size:1.5rem;font-weight:bold;">邹</div>
+                        <div class="ambassador-name">邹市明</div>
+                        <div class="ambassador-title">奥运冠军</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, '周迅 - 特奥东亚区形象大使')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#E91E63;color:white;font-size:1.5rem;font-weight:bold;">周</div>
+                        <div class="ambassador-name">周迅</div>
+                        <div class="ambassador-title">著名演员</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, '杨扬 - 特奥东亚区形象大使')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#2196F3;color:white;font-size:1.5rem;font-weight:bold;">杨</div>
+                        <div class="ambassador-name">杨扬</div>
+                        <div class="ambassador-title">冬奥冠军</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, '周冠宇 - 特奥东亚区形象大使')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#4CAF50;color:white;font-size:1.5rem;font-weight:bold;">周</div>
+                        <div class="ambassador-name">周冠宇</div>
+                        <div class="ambassador-title">F1车手</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, '苏翊鸣 - 特奥东亚区形象大使')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#00BCD4;color:white;font-size:1.5rem;font-weight:bold;">苏</div>
+                        <div class="ambassador-name">苏翊鸣</div>
+                        <div class="ambassador-title">单板滑雪冠军</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- China Section -->
+    <section class="what-is-so" id="china" style="background: var(--white);">
+        <div class="section-title">
+            <h2>中国与特奥</h2>
+            <p>深厚的历史渊源，辉煌的特奥记忆</p>
+        </div>
+
+        <div class="china-section">
+            <h3>2007年上海特奥世界夏季运动会</h3>
+            <div class="img-with-caption">
+                <img src="https://www.sinaimg.cn/dy/c/p/2007-10-02/U397P1T1D14016623F21DT20071002214015.jpg" 
+                     alt="第十二届特奥世界夏季运动会在上海举办" 
+                     class="clickable-img" 
+                     style="max-width: 100%;"
+                     onclick="openLightbox(this.src, '第十二届特奥世界夏季运动会 上海 2007')">
+                <p class="img-caption">第十二届特奥世界夏季运动会 上海 2007</p>
+            </div>
+            
+            <p style="margin-top: 20px;">2007年，第十二届特奥世界夏季运动会在上海举办，这是特奥历史上规模空前的盛会。来自165个国家的7,300多名运动员参赛，4万名志愿者参与服务。</p>
+            <p>时任上海市委书记的习近平主席全程参与了此次盛会，而这一届特奥世界运动会正是2008年北京奥运会的预演，向世界展示了中国对包容理念的支持。</p>
+        </div>
+
+    </section>
+
+    <!-- Get Involved -->
+    <section class="get-involved" id="get-involved">
+        <div class="section-title">
+            <h2>如何参与和支持</h2>
+            <p>每一个人的参与，都让融合新时代更加温暖</p>
+        </div>
+
+        <div class="action-cards">
+            <div class="action-card fade-in">
+                <div class="icon">🏃</div>
+                <h3>成为志愿者</h3>
+                <p>加入特奥活动的志愿服务，用你的时间和才能帮助运动员们实现梦想。</p>
+            </div>
+            <div class="action-card fade-in">
+                <div class="icon">💝</div>
+                <h3>捐助支持</h3>
+                <p>通过东亚区融合慈善晚宴等渠道捐款，所有善款将用于运动员训练和健康计划。</p>
+            </div>
+            <div class="action-card fade-in">
+                <div class="icon">🤝</div>
+                <h3>融合伙伴</h3>
+                <p>企业或组织可成为融合伙伴，共同推动包容理念在社区的普及。</p>
+            </div>
+            <div class="action-card fade-in">
+                <div class="icon">📢</div>
+                <h3>传播理念</h3>
+                <p>在社交媒体上分享特奥故事，让更多人了解并关注特殊奥林匹克运动。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>特奥东亚区 East Asia Region</h3>
+            <p>Special Olympics East Asia</p>
+            <div class="footer-divider"></div>
+            <p>更多信息请访问特奥官方网站</p>
+            <p>www.specialolympics.org</p>
+            <div class="footer-divider"></div>
+            <p class="oath-title">特奥运动员誓言</p>
+            <p class="oath-subtitle">Special Olympics Athletes' Oath</p>
+            <p class="slogan">勇敢尝试，争取胜利！</p>
+            <p class="slogan-en">Let me win. But if I cannot win, let me be brave in the attempt.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lightbox Functions
+        function openLightbox(src, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightboxImg.src = src;
+            lightboxCaption.textContent = caption;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                const navHeight = document.querySelector('.nav').offsetHeight;
+                const targetPosition = targetSection.offsetTop - navHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

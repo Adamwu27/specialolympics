@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Olympics - Inclusion in a New Era</title>
+    <style>
+        :root {
+            --primary-red: #E60012;
+            --dark-gray: #4A4A4A;
+            --light-gray: #6B6B6B;
+            --bg-light: #F8F8F8;
+            --white: #FFFFFF;
+            --accent-blue: #2E5C8A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.8;
+            background-color: var(--white);
+        }
+
+        /* Header */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #8B0000 100%);
+            color: var(--white);
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.3; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero-tagline {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 30px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 15px 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .nav-list li {
+            margin: 5px 15px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-list a:hover {
+            background: var(--primary-red);
+            color: var(--white);
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-red);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--light-gray);
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        /* What is SO */
+        .what-is-so {
+            background: var(--bg-light);
+        }
+
+        .intro-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .intro-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .intro-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(230,0,18,0.12);
+        }
+
+        .intro-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .intro-card h3 {
+            color: var(--primary-red);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .intro-card p {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Origin Story */
+        .origin {
+            background: var(--white);
+        }
+
+        .origin-section {
+            margin-bottom: 30px;
+        }
+
+        .origin-section h3 {
+            font-size: 1.4rem;
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+        }
+
+        .origin-section h3 span {
+            color: var(--primary-red);
+        }
+
+        .origin-section p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: var(--dark-gray);
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #C4000F 100%);
+            color: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            font-size: 3rem;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .quote-box p {
+            font-style: italic;
+            font-size: 1.1rem;
+            padding-left: 25px;
+            margin-bottom: 0 !important;
+            color: var(--white) !important;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-red), #FF6B6B);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding-left: 25px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            box-shadow: 0 2px 8px rgba(230,0,18,0.3);
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--primary-red);
+            font-size: 1.1rem;
+        }
+
+        .timeline-text {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Timeline Gallery Layout */
+        .timeline-gallery {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .timeline-left {
+            flex: 1;
+        }
+
+        .timeline-right {
+            flex: 0 0 280px;
+        }
+
+        .timeline-images {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .timeline-img-item {
+            text-align: center;
+        }
+
+        .timeline-img-item img {
+            width: 100%;
+            max-height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .timeline-img-item img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .timeline-img-item .img-caption {
+            font-size: 0.75rem;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-gallery {
+                flex-direction: column;
+            }
+
+            .timeline-right {
+                flex: none;
+                width: 100%;
+            }
+
+            .timeline-images {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .timeline-img-item {
+                flex: 0 0 calc(33.33% - 10px);
+            }
+
+            .timeline-img-item img {
+                max-height: 80px;
+            }
+        }
+
+        /* Clickable Image */
+        .clickable-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .clickable-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .img-caption {
+            font-size: 0.85rem;
+            color: var(--light-gray);
+            text-align: center;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .img-with-caption {
+            text-align: center;
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.92);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-caption {
+            color: white;
+            margin-top: 15px;
+            font-size: 1rem;
+            text-align: center;
+            max-width: 80%;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            transform: scale(1.1);
+        }
+
+        /* Comparison */
+        .comparison {
+            background: var(--bg-light);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+        }
+
+        .comparison-table th {
+            background: var(--primary-red);
+            color: var(--white);
+            padding: 18px 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .comparison-table th:first-child {
+            text-align: left;
+        }
+
+        .comparison-table th:not(:first-child) {
+            text-align: center;
+        }
+
+        .comparison-table td {
+            padding: 15px 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+            vertical-align: top;
+        }
+
+        .comparison-table td:first-child {
+            font-weight: 600;
+            color: var(--dark-gray);
+            background: #FAFAFA;
+        }
+
+        .comparison-table td:not(:first-child) {
+            text-align: center;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover td {
+            background: #FFF5F5;
+        }
+
+        /* Unified Sports */
+        .unified {
+            background: var(--white);
+        }
+
+        .unified-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .unified-type {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-red);
+            transition: transform 0.3s ease;
+        }
+
+        .unified-type:hover {
+            transform: translateX(5px);
+        }
+
+        .unified-type h4 {
+            color: var(--primary-red);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .unified-type p {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Athlete Stories */
+        .athletes {
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--white) 100%);
+        }
+
+        .athlete-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+        }
+
+        .athlete-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .athlete-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .athlete-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .athlete-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .athlete-image img:hover {
+            transform: scale(1.03);
+        }
+
+        .athlete-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--primary-red);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .athlete-content {
+            padding: 20px;
+        }
+
+        .athlete-content h3 {
+            color: var(--dark-gray);
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+
+        .athlete-country {
+            color: var(--primary-red);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .athlete-content p {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .athlete-achievements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .achievement-tag {
+            background: #FFF0F0;
+            color: var(--primary-red);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        /* East Asia */
+        .east-asia {
+            background: var(--bg-light);
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px 15px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+
+        .stat-label {
+            color: var(--light-gray);
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        .east-asia-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .ambassador-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .ambassador-tag {
+            background: var(--primary-red);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .service-area {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .service-area h4 {
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .area-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        /* Ambassador Grid */
+        .ambassador-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .ambassador-item {
+            text-align: center;
+            padding: 12px 8px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .ambassador-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(230,0,18,0.15);
+        }
+
+        .ambassador-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            margin: 0 auto 8px;
+            overflow: hidden;
+            border: 3px solid var(--primary-red);
+        }
+
+        .ambassador-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ambassador-name {
+            font-weight: 600;
+            color: var(--dark-gray);
+            font-size: 0.85rem;
+        }
+
+        .ambassador-title {
+            font-size: 0.7rem;
+            color: var(--light-gray);
+            margin-top: 2px;
+        }
+
+        /* World Games History */
+        .games-history {
+            background: linear-gradient(135deg, #FFF5F5 0%, #FFF 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #FFE5E5;
+        }
+
+        .games-history h4 {
+            color: var(--primary-red);
+            font-size: 1rem;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .games-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .games-col h5 {
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .games-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            justify-content: center;
+        }
+
+        .games-item {
+            background: var(--white);
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            color: var(--dark-gray);
+            border: 1px solid #eee;
+            white-space: nowrap;
+        }
+
+        .games-item span {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        .games-image {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .games-image img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .ambassador-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 8px;
+            }
+
+            .ambassador-avatar {
+                width: 45px;
+                height: 45px;
+            }
+
+            .ambassador-name {
+                font-size: 0.75rem;
+            }
+
+            .ambassador-title {
+                font-size: 0.6rem;
+            }
+
+            .games-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .games-item {
+                font-size: 0.65rem;
+                padding: 2px 6px;
+            }
+        }
+
+        .region-map {
+            display: none;
+        }
+
+        .members-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .member-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .member-item:hover {
+            transform: translateX(5px);
+        }
+
+        .member-flag {
+            font-size: 1.2rem;
+        }
+
+        .member-name {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+
+        @media (max-width: 480px) {
+            .ambassador-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .area-tag {
+            background: #F0F0F0;
+            color: var(--dark-gray);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        /* China Section */
+        .china-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .china-section h3 {
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .china-section p {
+            color: var(--light-gray);
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        /* Get Involved */
+        .get-involved {
+            background: var(--primary-red);
+            color: var(--white);
+        }
+
+        .get-involved .section-title h2,
+        .get-involved .section-title p {
+            color: var(--white);
+        }
+
+        .get-involved .section-title h2::after {
+            background: var(--white);
+        }
+
+        .action-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .action-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px 25px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .action-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.25);
+        }
+
+        .action-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .action-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .action-card p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .footer-divider {
+            width: 50px;
+            height: 2px;
+            background: var(--primary-red);
+            margin: 20px auto;
+        }
+
+        .slogan {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--primary-red);
+            margin-top: 15px;
+        }
+
+        .oath-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .oath-subtitle {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .slogan-en {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.8);
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .intro-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .intro-cards {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 35px 20px 45px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 40px 15px;
+            }
+
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .athlete-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .east-asia-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.75rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px 6px;
+            }
+
+            .nav-list {
+                padding: 10px;
+            }
+
+            .nav-list li {
+                margin: 3px 6px;
+            }
+
+            .nav-list a {
+                font-size: 0.85rem;
+                padding: 6px 10px;
+            }
+
+            .lightbox-close {
+                top: 15px;
+                right: 15px;
+                font-size: 30px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img src="" alt="" id="lightbox-img">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Special Olympics</h1>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="#what-is-so">What is SO</a></li>
+            <li><a href="#origin">Origin Story</a></li>
+            <li><a href="#comparison">Comparisons</a></li>
+            <li><a href="#unified">Unified Sports</a></li>
+            <li><a href="#athletes">Star Athletes</a></li>
+            <li><a href="#east-asia">East Asia</a></li>
+            <li><a href="#get-involved">Get Involved</a></li>
+        </ul>
+    </nav>
+
+    <!-- What is Special Olympics -->
+    <section class="what-is-so" id="what-is-so">
+        <div class="section-title">
+            <h2>What is Special Olympics?</h2>
+            <p>Special Olympics is a non-profit organization providing year-round sports training and athletic competition for people with intellectual disabilities</p>
+        </div>
+
+        <div class="intro-cards">
+            <div class="intro-card fade-in">
+                <div class="icon">🏆</div>
+                <h3>Global Movement</h3>
+                <p>Special Olympics has 200+ member organizations worldwide, hosting Summer and Winter World Games annually, with world-class competitions every two years.</p>
+            </div>
+            <div class="intro-card fade-in">
+                <div class="icon">❤️</div>
+                <h3>Beyond Sports</h3>
+                <p>Special Olympics focuses not only on athletic performance but also on athletes' physical and mental health. Health programs cover vision, hearing, dental, and more.</p>
+            </div>
+            <div class="intro-card fade-in">
+                <div class="icon">🤝</div>
+                <h3>Inclusion</h3>
+                <p>Through sports activities, people with and without intellectual disabilities participate together, learning inclusion and respect, building accessible communities.</p>
+            </div>
+            <div class="intro-card fade-in">
+                <div class="icon">🌟</div>
+                <h3>Unleashing Potential</h3>
+                <p>Enabling people with intellectual disabilities to unleash their potential in sports, express themselves bravely, share joy with family and friends, and live a wonderful life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Origin Story -->
+    <section class="origin" id="origin">
+        <div class="section-title">
+            <h2>Origin Story</h2>
+            <p>How a backyard summer camp changed the world</p>
+        </div>
+
+        <div class="origin-section">
+            <h3>Founder: <span>Eunice Kennedy Shriver</span></h3>
+            <p>Eunice Kennedy Shriver was a member of the Kennedy family and sister of John F. Kennedy. For over 50 years, she dedicated herself to improving the quality of life for people with intellectual disabilities, changing the world's perception of this population through action.</p>
+            <p>Her motivation came from her sister Rosemary—Eunice witnessed firsthand the unfair treatment Rosemary endured due to her intellectual disability, which inspired her lifelong commitment to fighting for the rights of people with intellectual disabilities.</p>
+            
+            <div class="img-with-caption">
+                <img src="https://dotorg.brightspotcdn.com/dims4/default/f4d71d6/2147483647/strip/true/crop/800x708+0+46/resize/540x478!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F29%2Fe6%2F6368b2254496bd62ba8013e97db5%2Feks-and-rosemary-young.jpg" 
+                     alt="Eunice Kennedy Shriver" 
+                     class="clickable-img" 
+                     onclick="openLightbox(this.src, 'Eunice Kennedy Shriver')">
+                <p class="img-caption">Eunice Kennedy Shriver</p>
+            </div>
+        </div>
+
+        <div class="origin-section" style="margin-top: 30px;">
+            <h3>The Backyard Summer Camp</h3>
+            <p>Special Olympics began with Eunice organizing summer camp activities in her backyard for people with intellectual disabilities. At that time, she invited all people with intellectual disabilities and their families from the surrounding community to participate in the summer camp in her backyard. Simple sports activities allowed everyone to feel the warmth of acceptance and inclusion for the first time.</p>
+            
+            <div class="img-with-caption">
+                <img src="https://dotorg.brightspotcdn.com/dims4/default/d6a41c3/2147483647/strip/true/crop/600x400+0+0/resize/1280x853!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F29%2Fe6%2F9771bf244c7683187bb712b13565%2Fth-4-eks.jpg" 
+                     alt="Camp Shriver" 
+                     class="clickable-img" 
+                     onclick="openLightbox(this.src, 'Camp Shriver')">
+                <p class="img-caption">Camp Shriver Activities</p>
+            </div>
+        </div>
+
+        <div class="origin-section" style="margin-top: 30px;">
+            <h3>The Special Olympics World Games</h3>
+            <p>On July 20, 1968, the first Special Olympics World Summer Games was held at Soldier Field in Chicago, USA. Hundreds of athletes with intellectual disabilities from the United States stepped onto the sports field for the first time. Since then, Special Olympics rapidly spread across the globe, becoming a social movement for equal opportunity for people with intellectual disabilities.</p>
+            
+            <div class="img-with-caption">
+                <img src="https://dotorg.brightspotcdn.com/dims4/default/7fe06a8/2147483647/strip/true/crop/600x400+0+0/resize/1280x853!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F61%2F58%2F197aa11f490d8cc6f0a750441799%2Fth-5-eks.jpg" 
+                     alt="First Special Olympics World Summer Games" 
+                     class="clickable-img" 
+                     onclick="openLightbox(this.src, 'First Special Olympics World Summer Games 1968')">
+                <p class="img-caption">First Special Olympics World Summer Games 1968</p>
+            </div>
+        </div>
+
+        <h4 style="color: var(--dark-gray); margin: 30px 0 20px; text-align: center;">1968-2025 Special Olympics Development Timeline</h4>
+
+        <div class="timeline-gallery">
+            <div class="timeline-left">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">July 20, 1968</div>
+                        <div class="timeline-text">The first Special Olympics World Summer Games was held in Chicago, USA, starting the movement</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2002</div>
+                        <div class="timeline-text">Special Olympics East Asia Region was officially established</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2007</div>
+                        <div class="timeline-text">The 12th Special Olympics World Summer Games was held in Shanghai</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-text">Special Olympics celebrates its 50th anniversary, with Yang Lan and athlete Xu Chuang representing East Asia in the torch relay</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-text">The 12th Special Olympics World Winter Games held in Turin, Italy</div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-right">
+                <div class="timeline-images">
+                    <div class="timeline-img-item">
+                        <img src="https://dotorg.brightspotcdn.com/dims4/default/7fe06a8/2147483647/strip/true/crop/600x400+0+0/resize/1280x853!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F61%2F58%2F197aa11f490d8cc6f0a750441799%2Fth-5-eks.jpg" 
+                             alt="First Special Olympics World Summer Games" 
+                             class="clickable-img"
+                             onclick="openLightbox(this.src, 'First Special Olympics World Summer Games 1968')">
+                        <p class="img-caption">1968 Chicago</p>
+                    </div>
+                    <div class="timeline-img-item">
+                        <img src="https://ts1.tc.mm.bing.net/th/id/OIP-C.sIP3fPWkQPVcLUHXfCPLVAHaHw?rs=1&pid=ImgDetMain&o=7&rm=3" 
+                             alt="Special Olympics 50th Anniversary" 
+                             class="clickable-img"
+                             style="object-position: center 35%;"
+                             onclick="openLightbox(this.src, 'Special Olympics celebrates its 50th anniversary 2018')">
+                        <p class="img-caption">2018 50th Anniversary</p>
+                    </div>
+                    <div class="timeline-img-item">
+                        <img src="https://edu.eastday.com/images/thumbnailimg/month_2503/202503190347384056.jpg" 
+                             alt="Turin Winter Games" 
+                             class="clickable-img"
+                             onclick="openLightbox(this.src, '12th Special Olympics World Winter Games Turin 2025')">
+                        <p class="img-caption">2025 Turin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="comparison" id="comparison">
+        <div class="section-title">
+            <h2>Special Olympics vs Paralympics vs Olympics</h2>
+            <p>What are the differences among the three major Olympic-level events?</p>
+        </div>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Special Olympics</th>
+                    <th>Paralympics</th>
+                    <th>Olympics</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Target Athletes</td>
+                    <td>People with intellectual disabilities</td>
+                    <td>People with physical, visual, or other disabilities</td>
+                    <td>Non-disabled athletes</td>
+                </tr>
+                <tr>
+                    <td>Core Philosophy</td>
+                    <td>Let me win. But if I cannot win, let me be brave in the attempt.<br>Focus on participation and self-transcendence</td>
+                    <td>Pursuit of elite athletic performance<br>Showcasing the strength of athletes with disabilities</td>
+                    <td>Faster, Higher, Stronger<br>World-class elite competition</td>
+                </tr>
+                <tr>
+                    <td>Organization</td>
+                    <td>Special Olympics International Board<br>200+ member organizations worldwide</td>
+                    <td>International Paralympic Committee<br>National Paralympic Committees</td>
+                    <td>International Olympic Committee<br>National Olympic Committees</td>
+                </tr>
+                <tr>
+                    <td>Event Cycle</td>
+                    <td>Summer and Winter alternating<br>Every two years</td>
+                    <td>Held after Olympic Games</td>
+                    <td>Every four years</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Unified Sports -->
+    <section class="unified" id="unified">
+        <div class="section-title">
+            <h2>Unified Sports</h2>
+            <p>People with and without intellectual disabilities form teams together to train and compete, breaking barriers through sports and helping everyone find a sense of belonging in sports</p>
+        </div>
+
+        <div class="unified-types">
+            <div class="unified-type fade-in">
+                <h4>🏅 Competitive</h4>
+                <p>Teams have similar numbers and skill levels, with athletes with and without intellectual disabilities competing together, demonstrating true sportsmanship.</p>
+            </div>
+            <div class="unified-type fade-in">
+                <h4>📈 Developmental</h4>
+                <p>More skilled athletes help less skilled members learn, achieving mutual growth through mentorship and cultivating team spirit.</p>
+            </div>
+            <div class="unified-type fade-in">
+                <h4>🎉 Experiential</h4>
+                <p>Focus on participation and experiencing the power of inclusion, allowing more people to experience the joy and connection that sports bring.</p>
+            </div>
+        </div>
+
+        <div class="section-title" style="margin-top: 50px;">
+            <h2>Unified Schools</h2>
+            <p>The Special Olympics Unified Schools program has covered <span style="color: var(--primary-red); font-weight: bold;">28,000+</span> schools in <span style="color: var(--primary-red); font-weight: bold;">151</span> countries, with over 1 million youth participants.<br><br>
+            In China, as of 2026, East Asia Region has over <span style="color: var(--primary-red); font-weight: bold;">1,500</span> Unified Schools joined, with over <span style="color: var(--primary-red); font-weight: bold;">500</span> Unified Schools in mainland China.</p>
+        </div>
+    </section>
+
+    <!-- Athlete Stories -->
+    <section class="athletes" id="athletes">
+        <div class="section-title">
+            <h2>Star Athlete Stories</h2>
+            <p>Every Special Olympics athlete is a hero in their own life</p>
+        </div>
+
+        <div class="athlete-cards">
+            <div class="athlete-card fade-in">
+                <div class="athlete-image">
+                    <img src="https://ts3.tc.mm.bing.net/th/id/OIP-C.hckjL-d6SN_8spLTgFmMuQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" 
+                         alt="Loretta Claiborne"
+                         onclick="openLightbox(this.src, 'Loretta Claiborne')">
+                    <span class="athlete-badge">⭐ USA</span>
+                </div>
+                <div class="athlete-content">
+                    <h3>Loretta Claiborne</h3>
+                    <p>A legendary Special Olympics athlete from the United States. Born with partial blindness and intellectual disabilities, she never bowed to fate, using her footsteps to measure the breadth of life.</p>
+                    <div class="athlete-achievements">
+                        <span class="achievement-tag">🏃 Completed 26 full marathons</span>
+                        <span class="achievement-tag">🥋 4th degree black belt in karate</span>
+                        <span class="achievement-tag">🏆 USA Today Woman of the Year</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="athlete-card fade-in">
+                <div class="athlete-image">
+                    <img src="https://pics1.baidu.com/feed/7c1ed21b0ef41bd5ea0835ad6680eec738db3df2.jpeg@f_auto?token=d5768bbb6e944a3adacafbef2774f7fc" 
+                         alt="Xu Chuang"
+                         onclick="openLightbox(this.src, 'Xu Chuang')">
+                    <span class="athlete-badge">🇨🇳 China</span>
+                </div>
+                <div class="athlete-content">
+                    <h3>Xu Chuang</h3>
+                    <p>A Special Olympics athlete from China, known as "China's Forrest Gump." His optimism and persistence have made him a role model for countless people. He demonstrated through action how Special Olympics changes lives.</p>
+                    <div class="athlete-achievements">
+                        <span class="achievement-tag">🔥 Served as Special Olympics torchbearer twice</span>
+                        <span class="achievement-tag">🏠 Invited to the White House</span>
+                        <span class="achievement-tag">💼 Currently works at Amway</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- East Asia -->
+    <section class="east-asia" id="east-asia">
+        <div class="section-title">
+            <h2>Special Olympics East Asia</h2>
+            <p>Serving people with intellectual disabilities in the East Asia region since 2002</p>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-item fade-in">
+                <div class="stat-number">2002</div>
+                <div class="stat-label">East Asia Region Founded</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">1,500+</div>
+                <div class="stat-label">Unified Schools</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">50M+</div>
+                <div class="stat-label">Total Funds Raised (CNY)</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Charity Galas</div>
+            </div>
+        </div>
+
+        <div class="east-asia-grid">
+            <div class="service-area">
+                <h4>📍 East Asia accredited Programs</h4>
+                <div class="members-list">
+                    <div class="member-item">
+                        <span class="member-name">Special Olympics China (SOC)</span>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-name">Special Olympics Hong Kong (SOHK)</span>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-name">Special Olympics Macau (SOM)</span>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-name">Special Olympics Chinese Taipei (SOCT)</span>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-name">Special Olympics Korea (SOK)</span>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-name">Special Olympics Mongolia (SOMGL)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-area">
+                <h4>⭐ Ambassadors</h4>
+                <div class="ambassador-grid">
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Yao Ming - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:var(--primary-red);color:white;font-size:1.5rem;font-weight:bold;">姚</div>
+                        <div class="ambassador-name">Yao Ming</div>
+                        <div class="ambassador-title">Basketball Legend</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Li Na - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#E91E63;color:white;font-size:1.5rem;font-weight:bold;">李</div>
+                        <div class="ambassador-name">Li Na</div>
+                        <div class="ambassador-title">Tennis Champion</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Yang Lan - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#9C27B0;color:white;font-size:1.5rem;font-weight:bold;">杨</div>
+                        <div class="ambassador-name">Yang Lan</div>
+                        <div class="ambassador-title">TV Host</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Zou Shiming - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#FF9800;color:white;font-size:1.5rem;font-weight:bold;">邹</div>
+                        <div class="ambassador-name">Zou Shiming</div>
+                        <div class="ambassador-title">Olympic Champion</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Zhou Xun - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#E91E63;color:white;font-size:1.5rem;font-weight:bold;">周</div>
+                        <div class="ambassador-name">Zhou Xun</div>
+                        <div class="ambassador-title">Famous Actress</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Yang Yang - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#2196F3;color:white;font-size:1.5rem;font-weight:bold;">杨</div>
+                        <div class="ambassador-name">Yang Yang</div>
+                        <div class="ambassador-title">Winter Olympic Champion</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Zhou Guanyu - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#4CAF50;color:white;font-size:1.5rem;font-weight:bold;">周</div>
+                        <div class="ambassador-name">Zhou Guanyu</div>
+                        <div class="ambassador-title">F1 Driver</div>
+                    </div>
+                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Su Yiming - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#00BCD4;color:white;font-size:1.5rem;font-weight:bold;">苏</div>
+                        <div class="ambassador-name">Su Yiming</div>
+                        <div class="ambassador-title">Snowboarding Champion</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- China Section -->
+    <section class="what-is-so" id="china" style="background: var(--white);">
+        <div class="section-title">
+            <h2>China and Special Olympics</h2>
+            <p>Deep historical ties, glorious Special Olympics memories</p>
+        </div>
+
+        <div class="china-section">
+            <h3>2007 Shanghai Special Olympics World Summer Games</h3>
+            <div class="img-with-caption">
+                <img src="https://www.sinaimg.cn/dy/c/p/2007-10-02/U397P1T1D14016623F21DT20071002214015.jpg" 
+                     alt="12th Special Olympics World Summer Games held in Shanghai" 
+                     class="clickable-img" 
+                     style="max-width: 100%;"
+                     onclick="openLightbox(this.src, '12th Special Olympics World Summer Games Shanghai 2007')">
+                <p class="img-caption">12th Special Olympics World Summer Games Shanghai 2007</p>
+            </div>
+            
+            <p style="margin-top: 20px;">In 2007, the 12th Special Olympics World Summer Games was held in Shanghai. This was an unprecedented event in Special Olympics history. More than 7,300 athletes from 165 countries participated, with 40,000 volunteers providing service.</p>
+            <p>President Xi Jinping, then Secretary of the Shanghai Municipal Party Committee, participated throughout the entire event. The World Games served as a preview of the 2008 Beijing Olympics, demonstrating China's support for inclusion to the world.</p>
+        </div>
+
+    </section>
+
+    <!-- Get Involved -->
+    <section class="get-involved" id="get-involved">
+        <div class="section-title">
+            <h2>How to Get Involved and Support</h2>
+            <p>Everyone's participation makes the era of inclusion warmer</p>
+        </div>
+
+        <div class="action-cards">
+            <div class="action-card fade-in">
+                <div class="icon">🏃</div>
+                <h3>Become a Volunteer</h3>
+                <p>Join Special Olympics volunteer services and use your time and talents to help athletes achieve their dreams.</p>
+            </div>
+            <div class="action-card fade-in">
+                <div class="icon">💝</div>
+                <h3>Donate</h3>
+                <p>Donate through the East Asia Region Inclusion Charity Gala and other channels. All donations will be used for athlete training and health programs.</p>
+            </div>
+            <div class="action-card fade-in">
+                <div class="icon">🤝</div>
+                <h3>Become a Unified Partner</h3>
+                <p>Companies or organizations can become Unified Partners to jointly promote inclusion in communities.</p>
+            </div>
+            <div class="action-card fade-in">
+                <div class="icon">📢</div>
+                <h3>Spread the Word</h3>
+                <p>Share Special Olympics stories on social media to help more people learn about and pay attention to the Special Olympics movement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>East Asia Region 东亚区</h3>
+            <p>Special Olympics East Asia</p>
+            <div class="footer-divider"></div>
+            <p>For more information, visit the official Special Olympics website</p>
+            <p>www.specialolympics.org</p>
+            <div class="footer-divider"></div>
+            <p class="oath-title">Special Olympics Athletes' Oath</p>
+            <p class="oath-subtitle">特奥运动员誓言</p>
+            <p class="slogan">Let me win. But if I cannot win, let me be brave in the attempt.</p>
+            <p class="slogan-en">勇敢尝试，争取胜利！</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lightbox Functions
+        function openLightbox(src, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightboxImg.src = src;
+            lightboxCaption.textContent = caption;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                const navHeight = document.querySelector('.nav').offsetHeight;
+                const targetPosition = targetSection.offsetTop - navHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
