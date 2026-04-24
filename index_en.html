@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Olympics - Inclusion in a New Era</title>
+    <title>Introduction to Special Olympics International</title>
     <style>
         :root {
             --primary-red: #E60012;
@@ -21,7 +21,7 @@
         }
 
         body {
-            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
             color: var(--dark-gray);
             line-height: 1.8;
             background-color: var(--white);
@@ -500,49 +500,32 @@
         .comparison-table td:first-child {
             font-weight: 600;
             color: var(--dark-gray);
-            background: #FAFAFA;
-        }
-
-        .comparison-table td:not(:first-child) {
-            text-align: center;
         }
 
         .comparison-table tr:last-child td {
             border-bottom: none;
         }
 
-        .comparison-table tr:hover td {
-            background: #FFF5F5;
-        }
-
         /* Unified Sports */
-        .unified {
-            background: var(--white);
-        }
-
         .unified-types {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
         }
 
         .unified-type {
-            background: var(--bg-light);
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-red);
-            transition: transform 0.3s ease;
-        }
-
-        .unified-type:hover {
-            transform: translateX(5px);
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            text-align: center;
         }
 
         .unified-type h4 {
             color: var(--primary-red);
             font-size: 1.2rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .unified-type p {
@@ -550,22 +533,23 @@
             font-size: 0.95rem;
         }
 
-        /* Athlete Stories */
+        /* Athletes */
         .athletes {
-            background: linear-gradient(180deg, var(--bg-light) 0%, var(--white) 100%);
+            background: var(--bg-light);
         }
 
         .athlete-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
+            margin-top: 40px;
         }
 
         .athlete-card {
             background: var(--white);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
             transition: transform 0.3s ease;
         }
 
@@ -574,9 +558,8 @@
         }
 
         .athlete-image {
-            height: 250px;
+            height: 200px;
             overflow: hidden;
-            position: relative;
         }
 
         .athlete-image img {
@@ -588,76 +571,56 @@
         }
 
         .athlete-image img:hover {
-            transform: scale(1.03);
-        }
-
-        .athlete-badge {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: var(--primary-red);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            transform: scale(1.05);
         }
 
         .athlete-content {
-            padding: 20px;
+            padding: 25px;
         }
 
         .athlete-content h3 {
-            color: var(--dark-gray);
-            font-size: 1.3rem;
-            margin-bottom: 6px;
-        }
-
-        .athlete-country {
             color: var(--primary-red);
-            font-size: 0.9rem;
-            margin-bottom: 12px;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
         }
 
         .athlete-content p {
-            color: var(--light-gray);
-            font-size: 0.9rem;
-            margin-bottom: 10px;
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
         }
 
         .athlete-achievements {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: 12px;
         }
 
         .achievement-tag {
-            background: #FFF0F0;
-            color: var(--primary-red);
-            padding: 4px 10px;
-            border-radius: 12px;
+            background: var(--bg-light);
+            color: var(--dark-gray);
+            padding: 5px 12px;
+            border-radius: 20px;
             font-size: 0.8rem;
         }
 
         /* East Asia */
         .east-asia {
-            background: var(--bg-light);
+            background: var(--white);
         }
 
         .stats-row {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 20px;
+            margin: 40px 0;
         }
 
         .stat-item {
             text-align: center;
-            padding: 20px 15px;
-            background: var(--white);
+            padding: 25px;
+            background: var(--bg-light);
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .stat-number {
@@ -667,79 +630,65 @@
         }
 
         .stat-label {
-            color: var(--light-gray);
-            font-size: 0.85rem;
+            color: var(--dark-gray);
+            font-size: 0.9rem;
             margin-top: 5px;
         }
 
         .east-asia-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .ambassador-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .ambassador-tag {
-            background: var(--primary-red);
-            color: var(--white);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .service-area {
-            background: var(--white);
+            background: var(--bg-light);
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 16px;
         }
 
         .service-area h4 {
-            color: var(--dark-gray);
+            color: var(--primary-red);
             font-size: 1.1rem;
-            margin-bottom: 12px;
+            margin-bottom: 20px;
         }
 
-        .area-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+        .members-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
         }
 
-        /* Ambassador Grid */
+        .member-item {
+            background: var(--white);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
         .ambassador-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            margin-top: 15px;
+            gap: 15px;
         }
 
         .ambassador-item {
             text-align: center;
-            padding: 12px 8px;
-            background: var(--bg-light);
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            transition: transform 0.3s ease;
         }
 
         .ambassador-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(230,0,18,0.15);
+            transform: scale(1.05);
         }
 
         .ambassador-avatar {
-            width: 55px;
-            height: 55px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
-            margin: 0 auto 8px;
             overflow: hidden;
+            margin: 0 auto 10px;
             border: 3px solid var(--primary-red);
         }
 
@@ -752,59 +701,48 @@
         .ambassador-name {
             font-weight: 600;
             color: var(--dark-gray);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
         .ambassador-title {
-            font-size: 0.7rem;
             color: var(--light-gray);
-            margin-top: 2px;
+            font-size: 0.75rem;
         }
 
-        /* World Games History */
+        /* Games History */
         .games-history {
-            background: linear-gradient(135deg, #FFF5F5 0%, #FFF 100%);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            border: 1px solid #FFE5E5;
-        }
-
-        .games-history h4 {
-            color: var(--primary-red);
-            font-size: 1rem;
-            margin-bottom: 12px;
-            text-align: center;
+            margin: 30px 0;
         }
 
         .games-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .games-col {
+            flex: 1;
         }
 
         .games-col h5 {
-            font-size: 0.85rem;
-            color: var(--accent-blue);
-            margin-bottom: 8px;
+            color: var(--primary-red);
+            font-size: 1rem;
+            margin-bottom: 15px;
             text-align: center;
         }
 
         .games-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 4px;
+            gap: 8px;
             justify-content: center;
         }
 
         .games-item {
-            background: var(--white);
-            padding: 3px 8px;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            color: var(--dark-gray);
+            background: var(--bg-light);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
             border: 1px solid #eee;
-            white-space: nowrap;
         }
 
         .games-item span {
@@ -812,151 +750,41 @@
             font-weight: 600;
         }
 
-        .games-image {
-            text-align: center;
-            margin: 15px 0;
-        }
-
-        .games-image img {
-            max-width: 100%;
-            max-height: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        @media (max-width: 768px) {
-            .ambassador-grid {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 8px;
-            }
-
-            .ambassador-avatar {
-                width: 45px;
-                height: 45px;
-            }
-
-            .ambassador-name {
-                font-size: 0.75rem;
-            }
-
-            .ambassador-title {
-                font-size: 0.6rem;
-            }
-
-            .games-row {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .games-item {
-                font-size: 0.65rem;
-                padding: 2px 6px;
-            }
-        }
-
-        .region-map {
-            display: none;
-        }
-
-        .members-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 10px;
-        }
-
-        .member-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 12px;
-            background: var(--bg-light);
-            border-radius: 8px;
-            transition: transform 0.2s ease;
-        }
-
-        .member-item:hover {
-            transform: translateX(5px);
-        }
-
-        .member-flag {
-            font-size: 1.2rem;
-        }
-
-        .member-name {
-            font-size: 0.9rem;
-            color: var(--dark-gray);
-        }
-
-        @media (max-width: 480px) {
-            .ambassador-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .area-tag {
-            background: #F0F0F0;
-            color: var(--dark-gray);
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-        }
-
         /* China Section */
         .china-section {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 30px;
             margin-top: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
         .china-section h3 {
-            color: var(--dark-gray);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .china-section p {
-            color: var(--light-gray);
-            margin-bottom: 12px;
-            font-size: 0.95rem;
+            color: var(--primary-red);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
         }
 
         /* Get Involved */
         .get-involved {
-            background: var(--primary-red);
-            color: var(--white);
-        }
-
-        .get-involved .section-title h2,
-        .get-involved .section-title p {
-            color: var(--white);
-        }
-
-        .get-involved .section-title h2::after {
-            background: var(--white);
+            background: var(--bg-light);
         }
 
         .action-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 40px;
         }
 
         .action-card {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(10px);
-            padding: 30px 25px;
+            background: var(--white);
+            padding: 30px 20px;
             border-radius: 16px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: transform 0.3s ease, background 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .action-card:hover {
             transform: translateY(-5px);
-            background: rgba(255,255,255,0.25);
+            box-shadow: 0 15px 40px rgba(230,0,18,0.12);
         }
 
         .action-card .icon {
@@ -965,135 +793,127 @@
         }
 
         .action-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
+            color: var(--primary-red);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
         }
 
         .action-card p {
-            opacity: 0.9;
+            color: var(--light-gray);
             font-size: 0.9rem;
         }
 
         /* Footer */
         footer {
-            background: var(--dark-gray);
+            background: linear-gradient(135deg, var(--primary-red) 0%, #8B0000 100%);
             color: var(--white);
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
 
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
         footer h3 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-
-        footer p {
-            opacity: 0.8;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
         }
 
         .footer-divider {
-            width: 50px;
+            width: 60px;
             height: 2px;
-            background: var(--primary-red);
+            background: rgba(255,255,255,0.3);
             margin: 20px auto;
         }
 
-        .slogan {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: var(--primary-red);
-            margin-top: 15px;
-        }
-
-        .oath-title {
+        footer p {
             font-size: 1rem;
-            font-weight: 600;
-            color: var(--white);
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-
-        .oath-subtitle {
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.7);
-            font-style: italic;
             margin-bottom: 10px;
         }
 
-        .slogan-en {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.8);
+        .oath-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .oath-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.8;
             font-style: italic;
-            margin-top: 8px;
+        }
+
+        .slogan {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .slogan-en {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-style: italic;
         }
 
         /* Responsive */
-        @media (max-width: 900px) {
+        @media (max-width: 992px) {
             .intro-cards {
                 grid-template-columns: repeat(2, 1fr);
             }
-        }
 
-        @media (max-width: 768px) {
-            .intro-cards {
+            .unified-types {
                 grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .hero {
-                padding: 35px 20px 45px;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            section {
-                padding: 40px 15px;
-            }
-
-            .section-title h2 {
-                font-size: 1.6rem;
-            }
-
-            .stats-row {
-                grid-template-columns: repeat(2, 1fr);
             }
 
             .athlete-cards {
                 grid-template-columns: 1fr;
             }
 
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .action-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .east-asia-grid {
                 grid-template-columns: 1fr;
             }
 
-            .comparison-table {
-                font-size: 0.75rem;
+            .games-row {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
             }
 
-            .comparison-table th,
-            .comparison-table td {
-                padding: 10px 6px;
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .intro-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+
+            .action-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .ambassador-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .nav-list {
-                padding: 10px;
+                justify-content: flex-start;
             }
 
             .nav-list li {
-                margin: 3px 6px;
+                margin: 5px 10px;
             }
 
             .nav-list a {
@@ -1132,16 +952,16 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <h1>Special Olympics</h1>
+            <h1>Introduction to Special Olympics International</h1>
         </div>
     </header>
 
     <!-- Navigation -->
     <nav class="nav">
         <ul class="nav-list">
-            <li><a href="#what-is-so">What is SO</a></li>
+            <li><a href="#what-is-so">What is Special Olympics</a></li>
             <li><a href="#origin">Origin Story</a></li>
-            <li><a href="#comparison">Comparisons</a></li>
+            <li><a href="#comparison">Three Major Events</a></li>
             <li><a href="#unified">Unified Sports</a></li>
             <li><a href="#athletes">Star Athletes</a></li>
             <li><a href="#east-asia">East Asia</a></li>
@@ -1153,29 +973,29 @@
     <section class="what-is-so" id="what-is-so">
         <div class="section-title">
             <h2>What is Special Olympics?</h2>
-            <p>Special Olympics is a non-profit organization providing year-round sports training and athletic competition for people with intellectual disabilities</p>
+            <p>Special Olympics is dedicated to providing year-round sports training and competition opportunities for children and adults with intellectual disabilities, enabling them to develop their potential, demonstrate courage, and share joy, skills, and friendship with other athletes, families, and the community.</p>
         </div>
 
         <div class="intro-cards">
             <div class="intro-card fade-in">
                 <div class="icon">🏆</div>
                 <h3>Global Movement</h3>
-                <p>Special Olympics has 200+ member organizations worldwide, hosting Summer and Winter World Games annually, with world-class competitions every two years.</p>
+                <p>Special Olympics International is a non-profit organization that provides year-round sports training and competition for people with intellectual disabilities, with over 200 accredited Programs worldwide, hosting nearly 60,000 events annually, serving over 4 million Special Olympics athletes and Unified partners.</p>
             </div>
             <div class="intro-card fade-in">
                 <div class="icon">❤️</div>
                 <h3>Beyond Sports</h3>
-                <p>Special Olympics focuses not only on athletic performance but also on athletes' physical and mental health. Health programs cover vision, hearing, dental, and more.</p>
+                <p>Special Olympics includes not only sports training and competition for people with intellectual disabilities, but also many non-sports programs: Healthy Athletes, Unified Schools, Young Athletes, Athlete Leadership, Family Engagement, and more.</p>
             </div>
             <div class="intro-card fade-in">
                 <div class="icon">🤝</div>
-                <h3>Inclusion</h3>
-                <p>Through sports activities, people with and without intellectual disabilities participate together, learning inclusion and respect, building accessible communities.</p>
+                <h3>Unified Philosophy</h3>
+                <p>Through sports and non-sports programs, people with and without intellectual disabilities participate together, learning inclusion and respect, building accessible communities together.</p>
             </div>
             <div class="intro-card fade-in">
                 <div class="icon">🌟</div>
-                <h3>Unleashing Potential</h3>
-                <p>Enabling people with intellectual disabilities to unleash their potential in sports, express themselves bravely, share joy with family and friends, and live a wonderful life.</p>
+                <h3>Unlocking Potential</h3>
+                <p>Enabling people with intellectual disabilities to realize their potential through sports, demonstrate courage, share joy with family and friends, and live a wonderful life.</p>
             </div>
         </div>
     </section>
@@ -1184,39 +1004,39 @@
     <section class="origin" id="origin">
         <div class="section-title">
             <h2>Origin Story</h2>
-            <p>How a backyard summer camp changed the world</p>
+            <p>How a summer camp that started in a backyard changed the world</p>
         </div>
 
         <div class="origin-section">
             <h3>Founder: <span>Eunice Kennedy Shriver</span></h3>
-            <p>Eunice Kennedy Shriver was a member of the Kennedy family and sister of John F. Kennedy. For over 50 years, she dedicated herself to improving the quality of life for people with intellectual disabilities, changing the world's perception of this population through action.</p>
-            <p>Her motivation came from her sister Rosemary—Eunice witnessed firsthand the unfair treatment Rosemary endured due to her intellectual disability, which inspired her lifelong commitment to fighting for the rights of people with intellectual disabilities.</p>
+            <p>Eunice Kennedy Shriver was a member of the American Kennedy family and sister of John F. Kennedy. For over 50 years, she dedicated herself to improving the quality of life for people with intellectual disabilities, changing the world's perception of people with intellectual disabilities through her actions.</p>
+            <p>Her motivation came from her sister Rosemary - Eunice witnessed the injustices her sister faced due to intellectual disability, which inspired her to dedicate her life to fighting for the rights of people with intellectual disabilities.</p>
             
             <div class="img-with-caption">
                 <img src="https://dotorg.brightspotcdn.com/dims4/default/f4d71d6/2147483647/strip/true/crop/800x708+0+46/resize/540x478!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F29%2Fe6%2F6368b2254496bd62ba8013e97db5%2Feks-and-rosemary-young.jpg" 
                      alt="Eunice Kennedy Shriver" 
                      class="clickable-img" 
-                     onclick="openLightbox(this.src, 'Eunice Kennedy Shriver')">
-                <p class="img-caption">Eunice Kennedy Shriver</p>
+                     onclick="openLightbox(this.src, 'Eunice Kennedy Shriver (left) and her sister Rosemary')">
+                <p class="img-caption">Eunice Kennedy Shriver (left) and her sister Rosemary</p>
             </div>
         </div>
 
         <div class="origin-section" style="margin-top: 30px;">
-            <h3>The Backyard Summer Camp</h3>
-            <p>Special Olympics began with Eunice organizing summer camp activities in her backyard for people with intellectual disabilities. At that time, she invited all people with intellectual disabilities and their families from the surrounding community to participate in the summer camp in her backyard. Simple sports activities allowed everyone to feel the warmth of acceptance and inclusion for the first time.</p>
+            <h3>Camp Shriver</h3>
+            <p>Special Olympics began with a summer camp that Eunice organized in her own backyard for people with intellectual disabilities. At that time, she invited people with intellectual disabilities and their families from surrounding communities to participate in summer camp activities in her backyard. Simple sports activities allowed everyone to feel the warmth of acceptance and inclusion for the first time.</p>
             
             <div class="img-with-caption">
                 <img src="https://dotorg.brightspotcdn.com/dims4/default/d6a41c3/2147483647/strip/true/crop/600x400+0+0/resize/1280x853!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F29%2Fe6%2F9771bf244c7683187bb712b13565%2Fth-4-eks.jpg" 
                      alt="Camp Shriver" 
                      class="clickable-img" 
-                     onclick="openLightbox(this.src, 'Camp Shriver')">
+                     onclick="openLightbox(this.src, 'Camp Shriver Activities')">
                 <p class="img-caption">Camp Shriver Activities</p>
             </div>
         </div>
 
         <div class="origin-section" style="margin-top: 30px;">
-            <h3>The Special Olympics World Games</h3>
-            <p>On July 20, 1968, the first Special Olympics World Summer Games was held at Soldier Field in Chicago, USA. Hundreds of athletes with intellectual disabilities from the United States stepped onto the sports field for the first time. Since then, Special Olympics rapidly spread across the globe, becoming a social movement for equal opportunity for people with intellectual disabilities.</p>
+            <h3>Special Olympics World Games</h3>
+            <p>On July 20, 1968, the first Special Olympics World Summer Games were held at Soldier Field in Chicago, USA. Hundreds of athletes with intellectual disabilities from across the United States stepped onto the sports field for the first time. Since then, the Special Olympics movement has spread rapidly around the world, becoming a social movement fighting for equal opportunities for people with intellectual disabilities.</p>
             
             <div class="img-with-caption">
                 <img src="https://dotorg.brightspotcdn.com/dims4/default/7fe06a8/2147483647/strip/true/crop/600x400+0+0/resize/1280x853!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F61%2F58%2F197aa11f490d8cc6f0a750441799%2Fth-5-eks.jpg" 
@@ -1227,59 +1047,54 @@
             </div>
         </div>
 
-        <h4 style="color: var(--dark-gray); margin: 30px 0 20px; text-align: center;">1968-2025 Special Olympics Development Timeline</h4>
+        <h4 style="color: var(--dark-gray); margin: 30px 0 20px; text-align: center;">History of Special Olympics World Games</h4>
 
-        <div class="timeline-gallery">
-            <div class="timeline-left">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-year">July 20, 1968</div>
-                        <div class="timeline-text">The first Special Olympics World Summer Games was held in Chicago, USA, starting the movement</div>
+        <div class="games-history">
+            <div class="games-row">
+                <div class="games-col">
+                    <h5>Summer Games (16 Editions)</h5>
+                    <div class="games-list">
+                        <span class="games-item"><span>1968</span> Chicago</span>
+                        <span class="games-item"><span>1970</span> Chicago</span>
+                        <span class="games-item"><span>1972</span> Los Angeles</span>
+                        <span class="games-item"><span>1975</span> Mt. Pleasant</span>
+                        <span class="games-item"><span>1979</span> Brockport</span>
+                        <span class="games-item"><span>1983</span> Baton Rouge</span>
+                        <span class="games-item"><span>1987</span> South Bend</span>
+                        <span class="games-item"><span>1991</span> Minneapolis</span>
+                        <span class="games-item"><span>1995</span> New Haven</span>
+                        <span class="games-item"><span>1999</span> Raleigh</span>
+                        <span class="games-item"><span>2003</span> Dublin</span>
+                        <span class="games-item"><span>2007</span> Shanghai</span>
+                        <span class="games-item"><span>2011</span> Athens</span>
+                        <span class="games-item"><span>2015</span> Los Angeles</span>
+                        <span class="games-item"><span>2019</span> Abu Dhabi</span>
+                        <span class="games-item"><span>2023</span> Berlin</span>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2002</div>
-                        <div class="timeline-text">Special Olympics East Asia Region was officially established</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2007</div>
-                        <div class="timeline-text">The 12th Special Olympics World Summer Games was held in Shanghai</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2018</div>
-                        <div class="timeline-text">Special Olympics celebrates its 50th anniversary, with Yang Lan and athlete Xu Chuang representing East Asia in the torch relay</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2025</div>
-                        <div class="timeline-text">The 12th Special Olympics World Winter Games held in Turin, Italy</div>
+                </div>
+                <div class="games-col">
+                    <h5>Winter Games (12 Editions)</h5>
+                    <div class="games-list">
+                        <span class="games-item"><span>1977</span> Steamboat Springs</span>
+                        <span class="games-item"><span>1981</span> Stowe</span>
+                        <span class="games-item"><span>1985</span> Park City</span>
+                        <span class="games-item"><span>1989</span> Lake Tahoe</span>
+                        <span class="games-item"><span>1993</span> Salzburg</span>
+                        <span class="games-item"><span>1997</span> Toronto</span>
+                        <span class="games-item"><span>2001</span> Anchorage</span>
+                        <span class="games-item"><span>2005</span> Nagano</span>
+                        <span class="games-item"><span>2009</span> Boise</span>
+                        <span class="games-item"><span>2013</span> PyeongChang</span>
+                        <span class="games-item"><span>2017</span> Graz</span>
+                        <span class="games-item"><span>2025</span> Turin</span>
                     </div>
                 </div>
             </div>
-            <div class="timeline-right">
-                <div class="timeline-images">
-                    <div class="timeline-img-item">
-                        <img src="https://dotorg.brightspotcdn.com/dims4/default/7fe06a8/2147483647/strip/true/crop/600x400+0+0/resize/1280x853!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F61%2F58%2F197aa11f490d8cc6f0a750441799%2Fth-5-eks.jpg" 
-                             alt="First Special Olympics World Summer Games" 
-                             class="clickable-img"
-                             onclick="openLightbox(this.src, 'First Special Olympics World Summer Games 1968')">
-                        <p class="img-caption">1968 Chicago</p>
-                    </div>
-                    <div class="timeline-img-item">
-                        <img src="https://ts1.tc.mm.bing.net/th/id/OIP-C.sIP3fPWkQPVcLUHXfCPLVAHaHw?rs=1&pid=ImgDetMain&o=7&rm=3" 
-                             alt="Special Olympics 50th Anniversary" 
-                             class="clickable-img"
-                             style="object-position: center 35%;"
-                             onclick="openLightbox(this.src, 'Special Olympics celebrates its 50th anniversary 2018')">
-                        <p class="img-caption">2018 50th Anniversary</p>
-                    </div>
-                    <div class="timeline-img-item">
-                        <img src="https://edu.eastday.com/images/thumbnailimg/month_2503/202503190347384056.jpg" 
-                             alt="Turin Winter Games" 
-                             class="clickable-img"
-                             onclick="openLightbox(this.src, '12th Special Olympics World Winter Games Turin 2025')">
-                        <p class="img-caption">2025 Turin</p>
-                    </div>
-                </div>
-            </div>
+        </div>
+
+        <div style="text-align:center; margin-top: 20px;">
+            <div class="games-item" style="display:inline-block; padding:10px 20px; font-size:0.9rem; background: var(--primary-red); color: white; border-color: var(--primary-red);"><span style="color:white;">2027</span> <span style="color:white;">Santiago, Chile</span> <span style="color:white;">Special Olympics World Summer Games</span></div>
+            <div class="games-item" style="display:inline-block; padding:10px 20px; font-size:0.9rem; background: var(--accent-blue); color: white; border-color: var(--accent-blue); margin-left: 15px;"><span style="color:white;">2029</span> <span style="color:white;">Switzerland</span> <span style="color:white;">Special Olympics World Winter Games</span></div>
         </div>
     </section>
 
@@ -1287,13 +1102,13 @@
     <section class="comparison" id="comparison">
         <div class="section-title">
             <h2>Special Olympics vs Paralympics vs Olympics</h2>
-            <p>What are the differences among the three major Olympic-level events?</p>
+            <p>What are the differences among the three Olympic-level events?</p>
         </div>
 
         <table class="comparison-table">
             <thead>
                 <tr>
-                    <th>Aspect</th>
+                    <th>Difference</th>
                     <th>Special Olympics</th>
                     <th>Paralympics</th>
                     <th>Olympics</th>
@@ -1301,27 +1116,27 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Target Athletes</td>
-                    <td>People with intellectual disabilities</td>
-                    <td>People with physical, visual, or other disabilities</td>
+                    <td>Athletes</td>
+                    <td>Primarily people with intellectual disabilities</td>
+                    <td>People with physical, visual, and other disabilities</td>
                     <td>Non-disabled athletes</td>
                 </tr>
                 <tr>
                     <td>Core Philosophy</td>
                     <td>Let me win. But if I cannot win, let me be brave in the attempt.<br>Focus on participation and self-transcendence</td>
-                    <td>Pursuit of elite athletic performance<br>Showcasing the strength of athletes with disabilities</td>
-                    <td>Faster, Higher, Stronger<br>World-class elite competition</td>
+                    <td>Pursuing elite competitive performance<br>Showcasing the abilities of athletes with disabilities</td>
+                    <td>Faster, Higher, Stronger<br>World's top competition</td>
                 </tr>
                 <tr>
                     <td>Organization</td>
-                    <td>Special Olympics International Board<br>200+ member organizations worldwide</td>
+                    <td>Led by Special Olympics International Board<br>200+ accredited Programs worldwide</td>
                     <td>International Paralympic Committee<br>National Paralympic Committees</td>
                     <td>International Olympic Committee<br>National Olympic Committees</td>
                 </tr>
                 <tr>
                     <td>Event Cycle</td>
-                    <td>Summer and Winter alternating<br>Every two years</td>
-                    <td>Held after Olympic Games</td>
+                    <td>Summer and Winter Games alternate, held every two years in odd-numbered years</td>
+                    <td>Held immediately after the Olympics</td>
                     <td>Every four years</td>
                 </tr>
             </tbody>
@@ -1332,28 +1147,39 @@
     <section class="unified" id="unified">
         <div class="section-title">
             <h2>Unified Sports</h2>
-            <p>People with and without intellectual disabilities form teams together to train and compete, breaking barriers through sports and helping everyone find a sense of belonging in sports</p>
+            <p>Bringing people with and without intellectual disabilities together to train and compete, breaking down barriers through sports, and helping everyone find belonging</p>
         </div>
 
         <div class="unified-types">
             <div class="unified-type fade-in">
                 <h4>🏅 Competitive</h4>
-                <p>Teams have similar numbers and skill levels, with athletes with and without intellectual disabilities competing together, demonstrating true sportsmanship.</p>
+                <p>Equal numbers of players with similar skill levels. Athletes with and without intellectual disabilities compete together, demonstrating true sportsmanship.</p>
             </div>
             <div class="unified-type fade-in">
                 <h4>📈 Developmental</h4>
-                <p>More skilled athletes help less skilled members learn, achieving mutual growth through mentorship and cultivating team spirit.</p>
+                <p>Higher-skilled players help lower-skilled ones learn, achieving growth together through mentorship and developing teamwork spirit.</p>
             </div>
             <div class="unified-type fade-in">
-                <h4>🎉 Experiential</h4>
-                <p>Focus on participation and experiencing the power of inclusion, allowing more people to experience the joy and connection that sports bring.</p>
+                <h4>🎉 Recreational</h4>
+                <p>Focus on participation and experiencing the joy of inclusion, letting more people feel the happiness and connection that sports bring.</p>
             </div>
         </div>
 
         <div class="section-title" style="margin-top: 50px;">
             <h2>Unified Schools</h2>
-            <p>The Special Olympics Unified Schools program has covered <span style="color: var(--primary-red); font-weight: bold;">28,000+</span> schools in <span style="color: var(--primary-red); font-weight: bold;">151</span> countries, with over 1 million youth participants.<br><br>
-            In China, as of 2026, East Asia Region has over <span style="color: var(--primary-red); font-weight: bold;">1,500</span> Unified Schools joined, with over <span style="color: var(--primary-red); font-weight: bold;">500</span> Unified Schools in mainland China.</p>
+            <p>The Special Olympics Unified Schools program has reached <span style="color: var(--primary-red); font-weight: bold;">24,000+</span> schools in <span style="color: var(--primary-red); font-weight: bold;">151</span> countries, with over 1 million youth participating.<br><br>
+            In China, as of 2026, the East Asia region has over <span style="color: var(--primary-red); font-weight: bold;">1,500</span> schools participating, including over <span style="color: var(--primary-red); font-weight: bold;">500</span> Unified Schools in mainland China.</p>
+        </div>
+
+        <div class="section-title" style="margin-top: 50px;">
+            <h2>Healthy Athletes</h2>
+            <p>The Special Olympics Healthy Athletes program aims to provide free health screenings through a pleasant, friendly environment, eliminating the anxiety and fear that people with intellectual disabilities often experience when facing doctors. The program helps develop athlete health, enabling most athletes to perform at their best in competition and training, showcasing their talents and skills.</p>
+            <p style="margin-top: 15px;">Currently covers 9 disciplines: Special Smiles, Opening Eyes, Health Promotion, Strong Minds, FUNfitness, Healthy Hearing, Fit Feet, MedFest, and Young Athletes Health</p>
+        </div>
+
+        <div class="section-title" style="margin-top: 50px;">
+            <h2>Young Athletes</h2>
+            <p>Special Olympics Young Athletes is a sports and play program for children ages 0 to 7 with and without intellectual disabilities. Young Athletes learn basic sports skills like running, kicking, and throwing. The program creates opportunities for families, teachers, caregivers, and community members to share the joy of sports with children. Both children with and without intellectual disabilities can participate and benefit from it.</p>
         </div>
     </section>
 
@@ -1370,13 +1196,12 @@
                     <img src="https://ts3.tc.mm.bing.net/th/id/OIP-C.hckjL-d6SN_8spLTgFmMuQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" 
                          alt="Loretta Claiborne"
                          onclick="openLightbox(this.src, 'Loretta Claiborne')">
-                    <span class="athlete-badge">⭐ USA</span>
                 </div>
                 <div class="athlete-content">
                     <h3>Loretta Claiborne</h3>
-                    <p>A legendary Special Olympics athlete from the United States. Born with partial blindness and intellectual disabilities, she never bowed to fate, using her footsteps to measure the breadth of life.</p>
+                    <p>A legendary Special Olympics athlete from the United States, although born with partial blindness and intellectual disability, she never gave in to fate and ran her way to a broader life.</p>
                     <div class="athlete-achievements">
-                        <span class="achievement-tag">🏃 Completed 26 full marathons</span>
+                        <span class="achievement-tag">🏃 Completed 26 marathons</span>
                         <span class="achievement-tag">🥋 4th degree black belt in karate</span>
                         <span class="achievement-tag">🏆 USA Today Woman of the Year</span>
                     </div>
@@ -1385,18 +1210,17 @@
 
             <div class="athlete-card fade-in">
                 <div class="athlete-image">
-                    <img src="https://pics1.baidu.com/feed/7c1ed21b0ef41bd5ea0835ad6680eec738db3df2.jpeg@f_auto?token=d5768bbb6e944a3adacafbef2774f7fc" 
-                         alt="Xu Chuang"
-                         onclick="openLightbox(this.src, 'Xu Chuang')">
-                    <span class="athlete-badge">🇨🇳 China</span>
+                    <img src="https://5b0988e595225.cdn.sohucs.com/images/20190317/5febdc1f580747ee8eb36c9d3e582999.jpeg" 
+                         alt="Li Xiang"
+                         onclick="openLightbox(this.src, 'Li Xiang')">
                 </div>
                 <div class="athlete-content">
-                    <h3>Xu Chuang</h3>
-                    <p>A Special Olympics athlete from China, known as "China's Forrest Gump." His optimism and persistence have made him a role model for countless people. He demonstrated through action how Special Olympics changes lives.</p>
+                    <h3>Li Xiang</h3>
+                    <p>A Special Olympics athlete leader from China. His dream is to stand on the highest podium at the Special Olympics World Games, inspiring more Special Olympics athletes to "be brave in the attempt"! He proved with his actions that Special Olympics can change lives.</p>
                     <div class="athlete-achievements">
-                        <span class="achievement-tag">🔥 Served as Special Olympics torchbearer twice</span>
-                        <span class="achievement-tag">🏠 Invited to the White House</span>
-                        <span class="achievement-tag">💼 Currently works at Amway</span>
+                        <span class="achievement-tag">🏆 World Champion</span>
+                        <span class="achievement-tag">❄️ Multiple World Games participant (Summer & Winter)</span>
+                        <span class="achievement-tag">🎖️ Medals in gymnastics, short track speed skating, floorball</span>
                     </div>
                 </div>
             </div>
@@ -1413,40 +1237,40 @@
         <div class="stats-row">
             <div class="stat-item fade-in">
                 <div class="stat-number">2002</div>
-                <div class="stat-label">East Asia Region Founded</div>
+                <div class="stat-label">East Asia Region Established</div>
             </div>
             <div class="stat-item fade-in">
                 <div class="stat-number">1,500+</div>
                 <div class="stat-label">Unified Schools</div>
             </div>
             <div class="stat-item fade-in">
-                <div class="stat-number">50M+</div>
-                <div class="stat-label">Total Funds Raised (CNY)</div>
+                <div class="stat-number">1.45M+</div>
+                <div class="stat-label">Special Olympics Athletes</div>
             </div>
             <div class="stat-item fade-in">
-                <div class="stat-number">11</div>
-                <div class="stat-label">Charity Galas</div>
+                <div class="stat-number">11 Editions</div>
+                <div class="stat-label">Unity Galas Raised 50M+</div>
             </div>
         </div>
 
         <div class="east-asia-grid">
             <div class="service-area">
-                <h4>📍 East Asia accredited Programs</h4>
+                <h4>📍 accredited Programs</h4>
                 <div class="members-list">
                     <div class="member-item">
-                        <span class="member-name">Special Olympics China (SOC)</span>
+                        <span class="member-name"><a href="http://www.cdpf.org.cn/" target="_blank" style="color: var(--dark-gray); text-decoration: none;">Special Olympics China (SOC)</a></span>
                     </div>
                     <div class="member-item">
-                        <span class="member-name">Special Olympics Hong Kong (SOHK)</span>
+                        <span class="member-name"><a href="http://www.hkso.org.hk/" target="_blank" style="color: var(--dark-gray); text-decoration: none;">Special Olympics Hong Kong (SOHK)</a></span>
                     </div>
                     <div class="member-item">
-                        <span class="member-name">Special Olympics Macau (SOM)</span>
+                        <span class="member-name"><a href="http://www.specialolympicsmacau.org/" target="_blank" style="color: var(--dark-gray); text-decoration: none;">Special Olympics Macau (SOM)</a></span>
                     </div>
                     <div class="member-item">
-                        <span class="member-name">Special Olympics Chinese Taipei (SOCT)</span>
+                        <span class="member-name"><a href="http://www.soct.org.tw/" target="_blank" style="color: var(--dark-gray); text-decoration: none;">Special Olympics Chinese Taipei (SOCT)</a></span>
                     </div>
                     <div class="member-item">
-                        <span class="member-name">Special Olympics Korea (SOK)</span>
+                        <span class="member-name"><a href="http://sokorea.or.kr/" target="_blank" style="color: var(--dark-gray); text-decoration: none;">Special Olympics Korea (SOK)</a></span>
                     </div>
                     <div class="member-item">
                         <span class="member-name">Special Olympics Mongolia (SOMGL)</span>
@@ -1457,45 +1281,45 @@
             <div class="service-area">
                 <h4>⭐ Ambassadors</h4>
                 <div class="ambassador-grid">
-                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Yao Ming - Special Olympics East Asia Ambassador')">
-                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:var(--primary-red);color:white;font-size:1.5rem;font-weight:bold;">姚</div>
+                    <div class="ambassador-item" onclick="openLightbox('https://dotorg.brightspotcdn.com/dims4/default/db669b4/2147483647/strip/true/crop/400x400+0+0/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2Fce%2Fe8%2F5c2c1bac407e9fbc4be4ff8f6c7a%2F400x400-yao-ming.jpg', 'Yao Ming - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="width:70px;height:70px;"><img src="https://dotorg.brightspotcdn.com/dims4/default/db669b4/2147483647/strip/true/crop/400x400+0+0/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2Fce%2Fe8%2F5c2c1bac407e9fbc4be4ff8f6c7a%2F400x400-yao-ming.jpg" alt="Yao Ming"></div>
                         <div class="ambassador-name">Yao Ming</div>
                         <div class="ambassador-title">Basketball Legend</div>
                     </div>
-                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Li Na - Special Olympics East Asia Ambassador')">
-                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#E91E63;color:white;font-size:1.5rem;font-weight:bold;">李</div>
+                    <div class="ambassador-item" onclick="openLightbox('https://dotorg.brightspotcdn.com/dims4/default/c951b53/2147483647/strip/true/crop/1668x1668+0+416/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2Fb8%2Fd3%2F6f5f8d464cf892dfda3e895afca3%2Fli-na-1.jpg', 'Li Na - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="width:70px;height:70px;"><img src="https://dotorg.brightspotcdn.com/dims4/default/c951b53/2147483647/strip/true/crop/1668x1668+0+416/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2Fb8%2Fd3%2F6f5f8d464cf892dfda3e895afca3%2Fli-na-1.jpg" alt="Li Na"></div>
                         <div class="ambassador-name">Li Na</div>
                         <div class="ambassador-title">Tennis Champion</div>
                     </div>
-                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Yang Lan - Special Olympics East Asia Ambassador')">
-                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#9C27B0;color:white;font-size:1.5rem;font-weight:bold;">杨</div>
+                    <div class="ambassador-item" onclick="openLightbox('https://dotorg.brightspotcdn.com/dims4/default/8adc26e/2147483647/strip/true/crop/1800x1800+0+0/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F96%2F15%2F385f2a5845f9860421f7fd746ce4%2Fyang-lan-2025-new.jpg', 'Yang Lan - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="width:70px;height:70px;"><img src="https://dotorg.brightspotcdn.com/dims4/default/8adc26e/2147483647/strip/true/crop/1800x1800+0+0/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F96%2F15%2F385f2a5845f9860421f7fd746ce4%2Fyang-lan-2025-new.jpg" alt="Yang Lan"></div>
                         <div class="ambassador-name">Yang Lan</div>
-                        <div class="ambassador-title">TV Host</div>
+                        <div class="ambassador-title">Renowned Host</div>
                     </div>
-                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Zou Shiming - Special Olympics East Asia Ambassador')">
-                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#FF9800;color:white;font-size:1.5rem;font-weight:bold;">邹</div>
+                    <div class="ambassador-item" onclick="openLightbox('https://dotorg.brightspotcdn.com/dims4/default/fbf368a/2147483647/strip/true/crop/2088x2088+136+0/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F6b%2Ffb%2F2409f5744a5e8a7caa87ec93d276%2Fzou-shiming-2025-1.jpg', 'Zou Shiming - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="width:70px;height:70px;"><img src="https://dotorg.brightspotcdn.com/dims4/default/fbf368a/2147483647/strip/true/crop/2088x2088+136+0/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F6b%2Ffb%2F2409f5744a5e8a7caa87ec93d276%2Fzou-shiming-2025-1.jpg" alt="Zou Shiming"></div>
                         <div class="ambassador-name">Zou Shiming</div>
                         <div class="ambassador-title">Olympic Champion</div>
                     </div>
-                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Zhou Xun - Special Olympics East Asia Ambassador')">
-                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#E91E63;color:white;font-size:1.5rem;font-weight:bold;">周</div>
+                    <div class="ambassador-item" onclick="openLightbox('https://dotorg.brightspotcdn.com/dims4/default/51c340e/2147483647/strip/true/crop/2160x2160+0+48/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F08%2Fd5%2F4128ae3c466d8b8d7733535632e8%2Fzhouxun-2025.jpg', 'Zhou Xun - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="width:70px;height:70px;"><img src="https://dotorg.brightspotcdn.com/dims4/default/51c340e/2147483647/strip/true/crop/2160x2160+0+48/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F08%2Fd5%2F4128ae3c466d8b8d7733535632e8%2Fzhouxun-2025.jpg" alt="Zhou Xun"></div>
                         <div class="ambassador-name">Zhou Xun</div>
                         <div class="ambassador-title">Famous Actress</div>
                     </div>
-                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Yang Yang - Special Olympics East Asia Ambassador')">
-                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#2196F3;color:white;font-size:1.5rem;font-weight:bold;">杨</div>
+                    <div class="ambassador-item" onclick="openLightbox('https://dotorg.brightspotcdn.com/dims4/default/9b6cd51/2147483647/strip/true/crop/1715x1715+0+33/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F0c%2Fa3%2Fc90c15464856bc0b05a93f4adc3f%2Fyang-yang.jpg', 'Yang Yang - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="width:70px;height:70px;"><img src="https://dotorg.brightspotcdn.com/dims4/default/9b6cd51/2147483647/strip/true/crop/1715x1715+0+33/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F0c%2Fa3%2Fc90c15464856bc0b05a93f4adc3f%2Fyang-yang.jpg" alt="Yang Yang"></div>
                         <div class="ambassador-name">Yang Yang</div>
                         <div class="ambassador-title">Winter Olympic Champion</div>
                     </div>
-                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Zhou Guanyu - Special Olympics East Asia Ambassador')">
-                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#4CAF50;color:white;font-size:1.5rem;font-weight:bold;">周</div>
+                    <div class="ambassador-item" onclick="openLightbox('https://dotorg.brightspotcdn.com/dims4/default/6e4bf15/2147483647/strip/true/crop/800x800+0+0/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F58%2F04%2Fa11e160841c8ad91e124e2eb991a%2F800x800-zhou-guanyu-bio.jpg', 'Zhou Guanyu - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="width:70px;height:70px;"><img src="https://dotorg.brightspotcdn.com/dims4/default/6e4bf15/2147483647/strip/true/crop/800x800+0+0/resize/240x240!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2F58%2F04%2Fa11e160841c8ad91e124e2eb991a%2F800x800-zhou-guanyu-bio.jpg" alt="Zhou Guanyu"></div>
                         <div class="ambassador-name">Zhou Guanyu</div>
                         <div class="ambassador-title">F1 Driver</div>
                     </div>
-                    <div class="ambassador-item" onclick="openLightbox(this.querySelector('.ambassador-avatar').textContent, 'Su Yiming - Special Olympics East Asia Ambassador')">
-                        <div class="ambassador-avatar" style="display:flex;align-items:center;justify-content:center;background:#00BCD4;color:white;font-size:1.5rem;font-weight:bold;">苏</div>
+                    <div class="ambassador-item" onclick="openLightbox('https://pics0.baidu.com/feed/8c1001e93901213fd9f811b2dee31ec12e2e95ad.jpeg?token=017a57b53f343d7386e42c99f2d7de94', 'Su Yiming - Special Olympics East Asia Ambassador')">
+                        <div class="ambassador-avatar" style="width:70px;height:70px;"><img src="https://pics0.baidu.com/feed/8c1001e93901213fd9f811b2dee31ec12e2e95ad.jpeg?token=017a57b53f343d7386e42c99f2d7de94" alt="Su Yiming" style="object-fit: cover; object-position: center 20%;"></div>
                         <div class="ambassador-name">Su Yiming</div>
-                        <div class="ambassador-title">Snowboarding Champion</div>
+                        <div class="ambassador-title">Snowboard Champion</div>
                     </div>
                 </div>
             </div>
@@ -1513,15 +1337,15 @@
             <h3>2007 Shanghai Special Olympics World Summer Games</h3>
             <div class="img-with-caption">
                 <img src="https://www.sinaimg.cn/dy/c/p/2007-10-02/U397P1T1D14016623F21DT20071002214015.jpg" 
-                     alt="12th Special Olympics World Summer Games held in Shanghai" 
+                     alt="12th Special Olympics World Summer Games Shanghai" 
                      class="clickable-img" 
                      style="max-width: 100%;"
                      onclick="openLightbox(this.src, '12th Special Olympics World Summer Games Shanghai 2007')">
                 <p class="img-caption">12th Special Olympics World Summer Games Shanghai 2007</p>
             </div>
             
-            <p style="margin-top: 20px;">In 2007, the 12th Special Olympics World Summer Games was held in Shanghai. This was an unprecedented event in Special Olympics history. More than 7,300 athletes from 165 countries participated, with 40,000 volunteers providing service.</p>
-            <p>President Xi Jinping, then Secretary of the Shanghai Municipal Party Committee, participated throughout the entire event. The World Games served as a preview of the 2008 Beijing Olympics, demonstrating China's support for inclusion to the world.</p>
+            <p style="margin-top: 20px;">In 2007, the 12th Special Olympics World Summer Games were held in Shanghai, an unprecedented event in Special Olympics history. Over 7,300 athletes from 165 countries participated, with 40,000 volunteers providing services.</p>
+            <p>Xi Jinping, then Party Secretary of Shanghai, was fully involved in this event. This Special Olympics World Games served as a preview for the 2008 Beijing Olympics, demonstrating China's support for the philosophy of inclusion to the world.</p>
         </div>
 
     </section>
@@ -1530,24 +1354,24 @@
     <section class="get-involved" id="get-involved">
         <div class="section-title">
             <h2>How to Get Involved and Support</h2>
-            <p>Everyone's participation makes the era of inclusion warmer</p>
+            <p>Everyone's participation makes the Unified Era warmer</p>
         </div>
 
         <div class="action-cards">
             <div class="action-card fade-in">
                 <div class="icon">🏃</div>
                 <h3>Become a Volunteer</h3>
-                <p>Join Special Olympics volunteer services and use your time and talents to help athletes achieve their dreams.</p>
+                <p>Join Special Olympics activities as a volunteer and help athletes realize their dreams with your time and talents.</p>
             </div>
             <div class="action-card fade-in">
                 <div class="icon">💝</div>
-                <h3>Donate</h3>
-                <p>Donate through the East Asia Region Inclusion Charity Gala and other channels. All donations will be used for athlete training and health programs.</p>
+                <h3>Make a Donation</h3>
+                <p>Donate through channels such as the East Asia Unity Galas. All donations will be used for athlete training and health programs.</p>
             </div>
             <div class="action-card fade-in">
                 <div class="icon">🤝</div>
-                <h3>Become a Unified Partner</h3>
-                <p>Companies or organizations can become Unified Partners to jointly promote inclusion in communities.</p>
+                <h3>Unified Partner</h3>
+                <p>Companies or organizations can become Unified Partners, jointly promoting the spread of inclusion philosophy in communities.</p>
             </div>
             <div class="action-card fade-in">
                 <div class="icon">📢</div>
@@ -1560,16 +1384,13 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <h3>East Asia Region 东亚区</h3>
-            <p>Special Olympics East Asia</p>
+            <h3>Special Olympics East Asia</h3>
             <div class="footer-divider"></div>
-            <p>For more information, visit the official Special Olympics website</p>
-            <p>www.specialolympics.org</p>
+            <p>For more information, please visit the official Special Olympics website</p>
+            <p><a href="https://www.specialolympics.org" target="_blank" style="color: var(--primary-red);">www.specialolympics.org</a></p>
             <div class="footer-divider"></div>
             <p class="oath-title">Special Olympics Athletes' Oath</p>
-            <p class="oath-subtitle">特奥运动员誓言</p>
             <p class="slogan">Let me win. But if I cannot win, let me be brave in the attempt.</p>
-            <p class="slogan-en">勇敢尝试，争取胜利！</p>
         </div>
     </footer>
 
